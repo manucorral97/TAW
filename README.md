@@ -3,7 +3,7 @@ Proyecto realizado para la asignatura de Tecnologías de Aplicaciones Web en la 
 
 Para el correcto funcionamiento del programa, es recomendable su descarga e instalación en un servidor local como XAMPP.
 
-A modo de depuracion, existen dos roles, uno de usuairo y otro de administrador.
+A modo de depuracion, existen dos roles, uno de usuario y otro de administrador.
 
 admin@gmail.com con contraseña admin
 
