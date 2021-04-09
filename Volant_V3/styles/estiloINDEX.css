@@ -1,0 +1,110 @@
+/*Tipo de letra, color y posicion del texto colocado enciam del buscador*/
+h3{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: rgb(19, 22, 39);
+    text-align: center;
+}
+
+#buscador{
+    text-align: center;
+    background-color: rgb(116, 165, 135);
+    padding: 10px 16px;
+    /*Asimetria*/
+    border-radius: 5px 15px 5px 15px;
+    box-shadow: 0 0 6px 0 rgba(29, 35, 61, 0.7);
+
+}
+
+/*Ponemos los bordes de los campos en el mismo azul que el campo header*/
+input[type=text], input[type=datetime-local], input[type=number], input[type=date]{
+    padding: 2px;
+    border-color: rgb(29, 35, 61);
+    outline: none;
+}
+
+/*Diseñamos el aspecto de los botones de Buscar y Limpiar*/
+input[type=button], input[type=submit] {
+    width: 30%;
+    background-color: rgb(29, 35, 61);
+    color: white;
+    padding: 14px 20px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 0px 35px 0px 35px;
+}
+
+input[type=button]:hover, input[type=submit]:hover { 
+    background-color: rgb(19, 22, 39);
+}
+
+input[type=reset] {
+    width: 30%;
+    background-color: rgb(177, 8, 8);
+    color: white;
+    padding: 14px 20px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    border: none;
+    border-radius: 35px 0px 35px 0px;
+}
+input[type=reset]:hover {
+    background-color: rgb(141, 7, 7);
+}
+
+/*Titulo de la tabla*/
+caption{
+    text-align: center;
+}
+
+/*Centramos la tabla en el medio de la pagina*/
+table{
+    margin: 0 auto;
+    margin-top: 1%;
+    text-align: left;
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 80%;
+
+}
+
+/*Elementos de la tabla*/
+th, td{
+    border-style: solid;
+    border: 1px solid black;
+    text-align: center;
+    padding: 1px;
+    margin: auto;
+}
+
+/*Primera fila de la tabla (Titulos)*/
+table tr:first-child{
+    color: black;
+    font-size: large;
+    font-weight: bold;
+}
+
+/*Pares*/
+table tr:nth-child(even) {
+    background-color: rgb(204, 204, 204);
+}
+
+/*Impares*/
+table tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+
+.elegir{
+    background-color: red;
+}
+
+.price{
+    background-color: aliceblue;
+    width: 50px;
+}
+
+.byPrice{
+    text-align: center;
+}

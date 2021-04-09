@@ -1,0 +1,242 @@
+/*-- COMUN --*/
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+/*Imposibilitamos el desplazamiento lateral*/
+body{
+    overflow-x: hidden;
+    background-color: rgb(245, 231, 218);
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*-------------------------------------*/
+/*CABECERA*/
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: black;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(29, 35, 61);
+    border-bottom: 1em;
+    border-radius: 1em;
+    margin: 5px;
+}
+
+/*Enlaces de la cabecera*/
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+}
+
+.nav-links a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+.nav-links li{
+    list-style: none;
+    padding: 10px;
+    opacity: 100;
+}
+
+/*Se muetsra al minimizar la pantalla*/
+.burger{
+    display: none;
+}
+
+.burger div{
+    width: 25px;
+    height: 5px;
+    background-color: rgb(245, 231, 218);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/*Ajusto la posicion de los titulares*/
+h1, h2, h3, h4{
+    padding: 1%;
+}
+
+/*-----------------------------------------------------------------------*/
+/*MAIN*/
+main{
+    margin: 5px;
+    padding: 5px;
+    border-radius: 7pt;
+    /*Ajustamos el tamaño del main dependiendo del viewport*/
+    min-height: calc(100vh - 160px - 22px - 100px - 42px);
+    
+}
+
+/*-----------------------------------------------------------------------*/
+/*PIE DE PAGINA*/
+footer {
+    height: 100px;
+    background: rgb(22, 22, 22);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    bottom: 0px;
+}
+
+/*Info mitad footer*/
+.info{
+    color: #fff;
+    font-family:'Poppins', sans-serif;
+    font-size: small;
+}
+
+/*Formualarios*/
+input, textarea{
+    background-color:rgba(245, 231, 218, 0.9);
+    /*transition: background-color 0.2s linear;*/
+    margin: auto;
+    border-style: double;
+}
+
+/*Al posicionar el cursor encima de los campos se dibujen de blanco*/
+input:hover, input:focus, textarea:hover, textarea:focus{
+    background-color: #fff;
+}
+
+
+a:link{
+    text-decoration: none;
+    color: rgb(116, 165, 135);
+}
+/*Que no cambie de color al visitar un enlace*/
+a:visited{
+    text-decoration: none;
+    color: rgb(116, 165, 135);
+}
+/*Al posicionarnos encima que se coloreen de azul*/
+a:hover{
+    text-decoration: none;
+    color: blue;
+}
+
+/*Al inicar sesion*/
+.sesion{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 3px;
+    margin: 2px;
+}
+.sesion #icon{
+    position: relative;
+    top: 3px;
+    margin-right: 5px;
+}
+
+.sesion a{
+    position: relative;
+    margin-right: 50px;
+}
+
+/*--------------MEDIAQUERY--------------------*/
+     /* estilo aplicado al bajar de los 1000 px */
+     @media all and (max-width: 1000px) {
+
+        /*blokeamos el desplazamiento lateral para ocukltar los links*/
+        body{
+           overflow-x: hidden;
+        }
+
+        nav{
+            height: 150px;
+            z-index: 1;
+        }
+
+        .nav-links{
+            position: absolute;
+            right: 0px;
+            height: calc(100vh - 180px - 90px);
+            top: 170px;
+            background-color: rgb(245, 231, 218);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            transform: translateX(100%);
+            transition: transform 0.5s ease-in;
+            z-index: 2;
+        }
+
+
+
+        .nav-links li{
+            opacity: 0;
+        }
+
+        .burger{
+            display: block;
+            cursor: pointer;
+        }
+
+        /*Recalculamos el main*/
+        main {
+            position: relative;
+            margin-top: 50px;
+            min-height: calc(100vh - 160px - 22px - 100px - 25px);
+        }
+
+     }
+
+
+/*Se activara esta clase cuando se pulse sobre la hamburgesa, volviendo a introducir en pantalla*/
+.nav-active{
+    transform: translateX(0%);
+}
+
+/*Añadimos animacion a la muestra por pantalla del contenido de la hamburguesa*/
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/*Cambiamos la hamburgesa por una cruz al ser pulsada*/
+.toggle .line1{
+    transform: rotate(-45deg) translate(-7.5px, 6px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-7.5px, -6px);
+}
+
+
+     /*Para el formulario en pequeño y vertical*/
+     @media all and (max-width: 853px) {
+
+         #Origen, #Destino, #Ida, #Vuelta, #Viajeros{
+            text-align:center; 
+            vertical-align:middle;
+            display: flow-root;
+            margin: auto;
+            margin-bottom: 2px;
+        }
+
+     }
+
+
+

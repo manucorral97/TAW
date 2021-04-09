@@ -1,0 +1,47 @@
+/*Coloremos el box main*/
+main{
+  background: rgb(158, 215, 245);
+}
+
+/*Ajustamos los titulos*/
+h3{
+  text-align: center;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: rgb(19, 22, 39);
+}
+
+form{
+  margin: auto;
+  text-align: center;
+}
+/*Rediseñamos el box del correo*/
+#texto {
+  width: 90%;
+  height: 100px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/*Boton de enviar*/
+input[type=reset] {
+  width: 50%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  border-radius: 35px 0px 35px 0px;
+}
+
+input[type=reset]:hover {
+  background-color: #45a049;
+}
+
+#emailUser{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}

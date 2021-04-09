@@ -1,0 +1,106 @@
+h3, h4{
+    text-align: center;
+
+}
+/*Centramos la tabla en el medio de la pagina*/
+table{
+    margin: 0 auto;
+    margin-top: 1%;
+    text-align: left;
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 90%;
+
+}
+
+/*Elementos de la tabla*/
+th, td{
+    border-style: solid;
+    border: 1px solid black;
+    text-align: center;
+    padding: 1px;
+    margin: auto;
+}
+
+/*Primera fila de la tabla (Titulos)*/
+table tr:first-child{
+    color: black;
+    font-size: x-large;
+    font-weight: 10px;
+    background-color: dimgray;
+}
+table tr{
+    background-color: whitesmoke;
+}
+
+.comprar{
+    width: 100%;
+    background: greenyellow;
+    border: none;
+    padding: 10px;
+    font-size: large;
+    cursor: pointer;
+}
+
+.comprar:hover{
+    background-color: green;
+}
+
+
+.total{
+    text-align: right;
+    font-weight: bolder;
+}
+
+input{
+    background: none;
+    font-size: 15px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    min-width: 50px;
+    border: none;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+
+/*Quitamos el hover*/
+input:hover{
+    background-color: whitesmoke;
+}
+
+input[type="submit"]{
+    background-color: rgb(29, 35, 61);
+    cursor: pointer;
+    color: aliceblue;
+    border: none;
+
+    outline: none;
+
+}
+
+input[type="submit"]:hover{
+    background-color: rgb(19, 22, 39);
+}
+
+.fin{
+    width: 20%;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.fin tr:first-child{
+    background-color: whitesmoke;
+}
+
+.fin input[type="submit"]{
+    background-color: rgb(173, 255, 47);
+    color: black;
+}
+
+.fin input[type="submit"]:hover{
+    background-color: rgba(173, 255, 47, 0.3);
+}
+
+

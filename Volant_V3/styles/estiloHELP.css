@@ -1,0 +1,15 @@
+/*Las diferentes trajetas de preguntas*/
+main div{
+    background-color: aliceblue;
+    margin: 1%;
+    text-align: justify;
+    border-radius: 5px;
+    padding: 1%;
+}
+
+/*Solo las negritas de los divs*/
+div b{
+    color: unset;
+}
+
+

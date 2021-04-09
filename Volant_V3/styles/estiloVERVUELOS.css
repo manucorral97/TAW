@@ -1,0 +1,84 @@
+/*Centramos la tabla en el medio de la pagina*/
+table{
+    margin: 0 auto;
+    margin-top: 1%;
+    text-align: left;
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 80%;
+
+}
+
+/*Elementos de la tabla*/
+th, td{
+    border-style: solid;
+    border: 1px solid black;
+    text-align: center;
+    padding: 1px;
+    margin: auto;
+}
+
+/*Primera fila de la tabla (Titulos)*/
+table tr:first-child{
+    color: black;
+    font-size: large;
+    font-weight: bold;
+}
+
+/*Pares*/
+table tr:nth-child(even){
+    background-color: rgb(204, 204, 204);
+}
+
+/*Impares*/
+table tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+
+
+.elegir{
+    background-color: rgb(29, 35, 61);
+    color: white;
+    padding: 15px;
+    border: none;
+    width: 100%;
+}
+
+.elegir:hover{
+    background-color: rgba(29, 35, 61, 0.3);
+    cursor: pointer;
+}
+
+.eliminar{
+    background-color: rgb(226, 25, 25);
+    color: white;
+    padding: 15px;
+    border: none;
+    width: 100%;
+}
+
+.eliminar:hover{
+    background-color: rgba(226, 25, 25, 0.5);
+    cursor: pointer;
+}
+
+
+input:nth-child(even){
+    background: none;
+    font-size: 15px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    min-width: 50px;
+    border: none;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    background-color: rgb(204, 204, 204);
+}
+
+/*Quitamos el hover*/
+input:hover{
+    background-color: rgb(204, 204, 204);
+}

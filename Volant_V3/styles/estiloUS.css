@@ -1,0 +1,86 @@
+main p{
+  text-align: justify;
+  padding: 1%;
+}
+
+/*Ajustamos la posicion de la galeria y del texto*/
+.main-top, .main-bottom{
+  background-color: aliceblue;
+  padding: 1%;
+  margin: 1%;
+  border-radius: 5px;
+}
+
+/*Galeria con LitghtBox*/
+.galeria{
+  width: 80%;
+  margin: 30px auto;
+  /*Para la cuadricula*/
+  display: grid;
+  /*Ponemos tres columnas y que ocupen un 33.3% del campo cada una*/
+  grid-template-columns: repeat(3, 1fr);
+  /*Ponemos una sola fila con una altitud de 250px*/
+  grid-template-rows: repeat(1, 250px);
+}
+
+/*Evitamos barrar de desplazamiento dentro de las propias imagenes y del contenedor*/
+.galeria .galeria-card{
+  overflow: hidden;
+}
+
+.galeria .galeria-card a{
+  width: 100%;
+  height: 100%;
+}
+
+/*Para redimensionar las imagenes*/
+.galeria .galeria-card a > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.galeria .galeria-card a > img:hover{
+  transform: scale(1.5);
+}
+
+
+/*Sistema de valoracion*/
+
+  /*Para mostrar solo las estrellas*/
+  input[type="radio"] {
+    display: none;
+  }
+
+  label {
+    color: grey;
+  }
+
+  /*Colocamos el orden*/
+  .clasificacion {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+  }
+  
+  /*Selecionamos los label que preceden al que estamos posicionados*/
+  label:hover, label:hover ~ label {
+    color: orange;
+  }
+
+  input[type="radio"]:checked ~ label {
+    color: orange;
+  }
+
+  /*Para poner la galeria en vertical */
+  @media all and (max-width: 600px) {
+    .galeria{
+      width: 80%;
+      margin: 50px auto;
+      display: grid;
+      /*Ponemos una columnas y que ocupen un 50% de la pantalla cada una*/
+      grid-template-columns: repeat(1, 2fr);
+      /*Ponemos una tres fila con una altitud de 150px*/
+      grid-template-rows: repeat(3, 150px);
+   }
+  }

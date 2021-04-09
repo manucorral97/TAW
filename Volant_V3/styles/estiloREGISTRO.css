@@ -1,0 +1,153 @@
+/*Colocamos un color gradual al fondo del espacio del main y lo centramos*/
+main{
+    background: linear-gradient(to right, rgb(30,36,59), rgb(76,110,98)); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+h2{
+    text-align: center;
+    font-weight: 200px;
+}
+/*Damos forma al form completo*/
+form{
+    background: white;
+    padding: 10px 0px;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+}
+
+/*Ajustamos la caja blanca al centro del contendor*/
+.register-box{
+    width: 100%;
+    margin: auto;
+}
+
+/*Los distintos campos*/
+form .grupo, form .grupo2{
+    position: relative;
+    margin: 40px;
+}
+
+/*Los iconos*/
+.grupo i, .grupo2 i {
+    width: 25px;
+    position: absolute;
+    top: 15px;
+    left: -30px;
+    text-align: center;
+}
+
+input[type="text"], input[type="email"], input[type="password"]{
+    background: none;
+    color: rgb(76,110,98);
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #5e5d5d;
+}
+
+/*Quitamos la "caja " y ponemos el | de color*/
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus{
+    outline: none;
+    color: #5e5d5d;
+    /*Color del |*/
+    caret-color: rgb(35, 211, 149);
+}
+
+/*Colocamos los nombres de las cajas (nombre, email, pass) arriba de la linea*/
+input[type="text"] ~ label, input[type="password"] ~ label, input[type="email"] ~ label{
+    color: #5e5d5d;
+    font-size: 16px;
+    position: absolute;
+    left: 5px;
+    top: -14px;
+    transition: 0.5s ease;
+    pointer-events: none;
+}
+
+    .grupo2{
+        text-align: center;
+        top: -20px;
+    }
+
+    .form input[type="radio"]{
+        display: none;
+        text-align: center;
+        align-items: center;
+        
+        
+    }
+    input[type="radio"] ~ label{
+    
+        background-color:#5e5d5d; 
+        display: inline-block;
+        padding: 2px 15px;
+        position: relative;
+        border-radius: 3px;
+        font-size: 14px;
+        cursor: pointer;
+        top: 10px;
+    }
+
+    input[type="radio"]:hover + label{
+        background-color: rgba(76,110,98, 0.2);
+    }
+
+    input[type="radio"]:checked + label{
+        background-color: rgba(76,110,98, 0.2);
+    }
+
+
+
+
+.barra{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+/*Una vez que se selecciona el campo crece la barra inferior y se colorea*/
+.barra::before{
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: 0px;
+    position: absolute;
+    background: linear-gradient(to right, rgb(30,36,59), rgb(76,110,98));
+    transition: 0.3s ease width;
+    left: 0px;
+}
+
+input:focus ~ .barra::before{
+    width: 100%;
+}
+
+/*Boton de unirse*/
+button{
+    background: linear-gradient(to right, rgb(30,36,59), rgb(76,110,98));
+    border: none;
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    color: white;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: linear-gradient(to right, rgba(30,36,59,0.7), rgba(76,110,98,0.7));
+}
+
+.pregunta{
+    font-size: 14px;
+    color: black;
+    text-align: center;
+    position: relative;
+    top: -25px;
+}

@@ -1,0 +1,76 @@
+
+/*Titulo de la tabla*/
+caption{
+    text-align: center;
+}
+
+/*Centramos la tabla en el medio de la pagina*/
+table{
+    margin: 0 auto;
+    margin-top: 1%;
+    text-align: left;
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 80%;
+
+}
+
+/*Elementos de la tabla*/
+th, td{
+    border-style: solid;
+    border: 1px solid black;
+    text-align: center;
+    padding: 1px;
+    margin: auto;
+}
+
+/*Primera fila de la tabla (Titulos)*/
+table tr:first-child{
+    color: black;
+    font-size: large;
+    font-weight: bold;
+}
+
+/*Pares*/
+table tr:nth-child(even) {
+    background-color: rgb(204, 204, 204);
+}
+
+/*Impares*/
+table tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+input[type=submit]{
+    background-color: rgb(29, 35, 61);
+    color: white;
+    padding: 15px;
+    border: none;
+    width: 100%;
+}
+input[type=submit]:hover{
+    background-color: rgba(29, 35, 61, 0.2);
+}
+
+input[type="text"], input[type="datetime-local"], input[type="number"], input[type="password"], input[type="email"], input[type="date"], input[type="datetime"]{
+    background: none;
+    font-size: 15px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    min-width: 50px;
+    border: none;
+    text-align: end;
+}
+
+input[type="email"]{
+    min-width: 200px;
+}
+
+/*Quitamos la "caja " y ponemos el | de color*/
+input[type="text"]:focus, input[type="datetime-local"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="date"]:focus, input[type="datetime"]:focus{
+    outline: none;
+    color: #5e5d5d;
+    /*Color del |*/
+    caret-color: rgb(35, 211, 149);
+}
